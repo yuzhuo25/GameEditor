@@ -18,8 +18,6 @@ export default {
     Thumbnail
   },
 
-
-  
   setup() {
     const treeRef = ref(false);
     return {
