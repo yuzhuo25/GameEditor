@@ -34,4 +34,7 @@ export default {
 </script>
 
 <style>
+.ant-layout{
+  background: transparent !important;
+}
 </style>
