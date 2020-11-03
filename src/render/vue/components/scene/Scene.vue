@@ -5,7 +5,7 @@
     </a-layout-sider>
     <a-layout>
         <a-layout-content style="height:calc(100%-200px);width:calc(100%-64px)">
-            <Stage />
+            <Stage :isCurrentTab="tabKey === 'scene'" />
         </a-layout-content>
     </a-layout>
  
@@ -18,16 +18,16 @@ import Stage from './Stage.vue'
 export default {
     components: {
         TreeSprites,
-        Stage
+        Stage,
     }, 
+    props: ['tabKey'],
     
     data(){
         return {
             visible: false,
         }
     },
-    created(){
-    },
+    created(){    },
     methods: {
         /**
          * 向主进程发送导入|更新资源事件

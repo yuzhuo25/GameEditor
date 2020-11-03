@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <!-- <div></div> -->
 </template>
 
 <script>
@@ -16,11 +16,13 @@
 	// import KKMeshEffectMaterial from '@/shader/KKMeshEffectMaterial';
 	// import KKMeshEffectVertexOffSetMaterial from '@/shader/KKMeshEffectVertexOffSetMaterial';
 	// import KKMeshEffectDistortMaterial from '@/shader/KKMeshEffectDistortMaterial';
-	// import StaticData from '@/layaLayer/EditorData/StaticData';
+    // import StaticData from '@/layaLayer/EditorData/StaticData';
 
 export default {
+
     components: {
     }, 
+    props: ['isCurrentTab'],
     
     data(){
         return {

@@ -46,6 +46,7 @@
 import Thumbnail from "../common/Thumbnail.vue";
 import Sets from "../components/globalCommponents/Sets.vue";
 import Scene from "../components/scene/Scene.vue"
+
 export default {
   components: {
     Thumbnail,
@@ -60,8 +61,14 @@ export default {
   },
   methods: {
     changeTab(e) {
-      console.log("[MainPage] [changeTab]", e);
       this.currentTab = e.key;
+      //显隐舞台
+      this.toggleStage();
+    },
+
+    toggleStage() {
+      const canvasDiv = document.getElementById("layaContainer");
+      canvasDiv.style.display = this.currentTab=="scene" ? "block" : "none";
     }
   }
 };

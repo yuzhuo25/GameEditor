@@ -17,7 +17,7 @@ export default {
     }
   },
 
-  created (){
+  created() {
     if(localStorage.getItem("rootFile")){
         ipcRenderer.send("get-rootfile", localStorage.getItem("rootFile"));
         this.hasRootFileRef = true;
