@@ -30,15 +30,13 @@ export default {
         }
     },
     created(){
-        
-
     },
     mounted () {
         const pixelRito = window.devicePixelRatio;
         const canvas_w = 1920;
         const canvas_h = 1040;
         const offset_l = 200;
-        const offset_t = 64;
+        const offset_t = 100;
         let window_w = window.innerWidth;
         let window_h = window.innerHeight;
 
@@ -51,8 +49,8 @@ export default {
         canvasDiv.style.transformOrigin = "0 0";
         canvasDiv.style.transform = `scale(${(window_w - offset_l)/canvas_w}, ${(window_h - offset_t)/canvas_h})`;
         canvasDiv.style.position = "absolute";
-        canvasDiv.style.top = "64px";
-        canvasDiv.style.left = "200px";
+        canvasDiv.style.top = `${offset_t}px`;
+        canvasDiv.style.left = `${offset_l}px`;
         window.onresize = () => {
             window_w = window.innerWidth;
             window_h = window.innerHeight;

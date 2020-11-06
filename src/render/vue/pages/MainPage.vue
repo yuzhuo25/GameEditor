@@ -15,8 +15,11 @@
         <a-menu-item key="code">
           代码配置
         </a-menu-item>
+        <a-menu-item key="task">
+          任务配置
+        </a-menu-item>
         <a-menu-item key="info">
-          信息配置
+          关卡信息
         </a-menu-item>
       </a-menu>
     </a-layout-header>
@@ -33,25 +36,39 @@
           Content
         </a-layout-content>
     </a-layout>
-    <a-layout v-if="currentTab==='info'">
+    <a-layout v-if="currentTab==='task'">
       <a-layout-content
           :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
         >
           Content
         </a-layout-content>
     </a-layout>
+    <a-layout v-if="currentTab === 'info'">
+      <a-layout-content 
+        :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+        >
+        <Info />
+      </a-layout-content>
+      
+    </a-layout>
   </a-layout>
+  <NewLevelModal />
 </template>
 <script>
 import Thumbnail from "../common/Thumbnail.vue";
 import Sets from "../components/globalCommponents/Sets.vue";
-import Scene from "../components/scene/Scene.vue"
+import Scene from "../components/scene/Scene.vue";
+import Info from "../components/info/Info.vue";
+import NewLevelModal from '../components/globalCommponents/NewLevelModal.vue'
+
 
 export default {
   components: {
     Thumbnail,
     Sets,
-    Scene
+    Scene,
+    Info,
+    NewLevelModal
   },
   data() {
     return {

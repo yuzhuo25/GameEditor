@@ -1,0 +1,22 @@
+[
+    {
+        "type": "default",
+        "desc": "默认"
+    },
+    {
+        "type": "red",
+        "desc": "红色"
+    },
+    {
+        "type": "yellow",
+        "desc": "黄色"
+    },
+    {
+        "type": "blue",
+        "desc": "蓝色"
+    },
+    {
+        "type": "green",
+        "desc": "绿色"
+    }
+]

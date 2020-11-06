@@ -1,0 +1,4251 @@
+[
+    {
+        "type": -1,
+        "desc": "无",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 1,
+        "desc": "editMonster AI",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 2,
+        "desc": "怪物基地AI",
+        "aiparam": [
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster",
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "baitIds",
+                "desc": "守卫怪列表:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报声音间隔（ms）:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 3,
+        "desc": "怪物诱饵",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "baitDurationTime",
+                "desc": "诱饵持续时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "activeDelayTime",
+                "desc": "激活延时时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "baitMonsterTags",
+                "desc": "可吸引的怪物Tag数组:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "attrName": "baitActiveRadius",
+                "step": 0.1,
+                "desc": "诱饵激活半径::",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "follow": {
+                "isFollow": false
+            }
+        }
+    },
+    {
+        "type": 4,
+        "desc": "爆炸怪物AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "sleepInterval",
+                "desc": "间隔时间（ms）:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "wakeTime",
+                "desc": "苏醒时间（ms）:",
+                "defaultValue": 350
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "sleepEffect",
+                "desc": "睡眠特效:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "wakeEffect",
+                "desc": "苏醒特效:",
+                "defaultValue": ""
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "speed": 10
+            }
+        }
+    },
+    {
+        "type": 5,
+        "desc": "怪物工厂AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "startProdDelay",
+                "desc": "启动延时（ms）:",
+                "defaultValue": 5000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "出门时开门动画延时(ms):",
+                "desc": "延迟开门时间（ms）:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔（ms）:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警告声音间隔（ms）:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodQueue": [],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 6,
+        "desc": "安全区AI",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 7,
+        "desc": "医疗站AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "totalTreatNumber",
+                "desc": "治疗次数:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "treatEffect",
+                "desc": "治疗特效:",
+                "defaultValue": ""
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 8,
+        "desc": "机关触发生产随机怪",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "transVal": false,
+                "attrName": "displayProductionMonster",
+                "desc": "是否显示生产数量:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延迟开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报音效间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "gear"
+                ],
+                "attrName": "triggerGearIds",
+                "desc": "可触发当前工厂的机关:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodQueue": [],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 9,
+        "desc": "npc可触发随机数量的怪物工厂",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isRandomFactoryParent",
+                "desc": "是否是父级工厂:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "attrName": "childFactoryIds",
+                "desc": "子级工厂:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "npc"
+                ],
+                "attrName": "triggerNpcIds",
+                "desc": "触发NPC:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延迟开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报音效间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodQueue": [],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 10,
+        "desc": "近战怪物AI 继承普通怪物逻辑 新增优先级功能",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 31,
+        "desc": "近战怪物AI 继承普通怪物逻辑 新增优先级功能,应打尽打",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 11,
+        "desc": "死亡时有掉落物怪",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isUserRandomPosition",
+                "desc": "是否使用随机位置:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "dropList": [
+                {
+                    "type": 1,
+                    "templateId": "",
+                    "weight": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 12,
+        "desc": "真随机怪物工厂",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isDelayStart",
+                "desc": "是否延时启动:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "startProdDelay",
+                "desc": "启动延时(ms):",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isRandomFactoryParent",
+                "desc": "是否是父级工厂:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "attrName": "childFactoryIds",
+                "desc": "子级工厂:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "npc"
+                ],
+                "attrName": "triggerNpcIds",
+                "desc": "触发NPC:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延时开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报声音间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "onlyOneInPool",
+                "desc": "是否指定模版随机:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "attrName": "onlyOneInPoolTemplateId",
+                "desc": "指定模版:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMaxMonsterCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 13,
+        "desc": "召集类型怪物",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 14,
+        "desc": "雇佣兵AI 打开优先级开关 就是雇佣兵守卫AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "followDis",
+                "desc": "跟随距离",
+                "defaultValue": 0
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            }
+        }
+    },
+    {
+        "type": 15,
+        "desc": "自爆怪AI",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 16,
+        "desc": "第十二课Boss的AI",
+        "states": [
+            "脸红",
+            "脸绿",
+            "脸黄",
+            "死亡"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_green",
+            "skill_yellow"
+        ],
+        "methods": [
+            "isFaceRed",
+            "isFaceGreen",
+            "isFaceYellow",
+            "isBoosDead"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareBossRedSkillTime",
+                "desc": "BOSS脸红技能准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareBossGreenSkillTime",
+                "desc": "BOSS脸绿技能准备时间:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "fightPos": {
+                "x": 0,
+                "y": 0
+            },
+            "avoidPos": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    {
+        "type": 17,
+        "desc": "生产采集物工厂AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "startProdDelay",
+                "desc": "延迟生产时间（ms）:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔（ms）:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "onlyOneInPool",
+                "desc": "是否指定模版随机:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "isTemplate": true,
+                "attrName": "onlyOneInPoolTemplateId",
+                "desc": "指定模版:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 6
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMaxCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 8
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "prodRadius",
+                "desc": "半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ]
+        }
+    },
+    {
+        "type": 18,
+        "desc": "死亡掉落宝物的近战怪AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 19,
+        "desc": "隐身的真随机怪物工厂AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "immediatelyComplete",
+                "desc": "是否立即完成(兼容隐身工厂使用):",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isDelayStart",
+                "desc": "是否延时启动:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "startProdDelay",
+                "desc": "延迟生产时间（ms）:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isRandomFactoryParent",
+                "desc": "是否是父级工厂:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "attrName": "childFactoryIds",
+                "desc": "子级工厂:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "npc"
+                ],
+                "attrName": "triggerNpcIds",
+                "desc": "触发NPC:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延迟开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报音效间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "onlyOneInPool",
+                "desc": "是否指定模版随机:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "isTemplate": true,
+                "attrName": "onlyOneInPoolTemplateId",
+                "desc": "指定模版:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMaxMonsterCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            },
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ]
+        }
+    },
+    {
+        "type": 20,
+        "desc": "第十三课boss的AI",
+        "states": [
+            "脸红",
+            "脸绿",
+            "脸紫",
+            "死亡"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_green",
+            "skill_violet"
+        ],
+        "methods": [
+            "isFaceRed",
+            "isFaceGreen",
+            "isFaceViolet",
+            "isBoosDead"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareRedSkillTime",
+                "desc": "红色炮弹准备时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareGreenSkillTime",
+                "desc": "绿色炮弹准备时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareVioletSkillTime",
+                "desc": "紫色炮弹准备时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "faceGreenIdleTime",
+                "desc": "脸绿召唤小怪后等待时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "enterGreenBeforeFaceRedCount",
+                "desc": "多少次脸红就进入脸绿:",
+                "defaultValue": 3
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "lowHpRate",
+                "desc": "血量低比率(和最大血量):",
+                "defaultValue": 0.3
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "isTemplate": false,
+                "attrName": "callMonsterTemplateIds",
+                "desc": "召唤小怪模板id列表:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "callMonsterBornPosition": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 21,
+        "desc": "炮台AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "radius",
+                "desc": "半径:",
+                "defaultValue": 10
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 22,
+        "desc": "第十四课boss的AI",
+        "states": [
+            "脸蓝",
+            "脸红",
+            "脸黄",
+            "脸橙",
+            "死亡"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_yellow",
+            "skill_orange",
+            "skill_blue"
+        ],
+        "methods": [
+            "isFaceBlue",
+            "isFaceRed",
+            "isFaceYellow",
+            "isFaceOrange",
+            "isBoosDead"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "enterBlueBeforeFaceYellowCount",
+                "desc": "N次激光后召唤:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "tiredTime",
+                "desc": "疲惫时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareRedSkillTime",
+                "desc": "红色炮弹准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareYellowSkillTIme",
+                "desc": "黄色火柱准备时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareOrangeSkillTime",
+                "desc": "橙色喷火准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "isTemplate": true,
+                "attrName": "callMonsterTemplateIds",
+                "desc": "召唤小怪模板id列表:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "perStateCallMonsterCount",
+                "desc": "每次召唤数量:",
+                "defaultValue": 6
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "callMonsterBornPosition": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "redSkillPositionCenter": {
+                "x": 0,
+                "y": 0
+            },
+            "redSkillPositionRight": {
+                "x": 0,
+                "y": 0
+            },
+            "redSkillPositionLeft": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    {
+        "type": 27,
+        "desc": "第十六课boss的AI",
+        "states": [
+            "脸蓝",
+            "脸红",
+            "脸黄",
+            "死亡"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_yellow",
+            "skill_blue"
+        ],
+        "methods": [
+            "isFaceBlue",
+            "isFaceRed",
+            "isFaceYellow",
+            "isBoosDead"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "enterBlueBeforeFaceRedCount",
+                "desc": "N次重击后召唤:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareRedSkillTime",
+                "desc": "红色重击准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareYellowSkillTIme",
+                "desc": "黄色召唤准备时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareBlueSkillTime",
+                "desc": "蓝色冰刺准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "isTemplate": true,
+                "attrName": "callMonsterTemplateIds",
+                "desc": "召唤小怪模板id列表:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "callMonsterBornPosition": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 23,
+        "desc": "倒计时怪物AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "totalTime",
+                "desc": "总时间:",
+                "defaultValue": 30000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayTime",
+                "desc": "延迟时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "intervalTime",
+                "desc": "间隔时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "eachReduceTime",
+                "desc": "每次减少时间:",
+                "defaultValue": 1000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 24,
+        "desc": "间隔治疗AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "totalTreatNumber",
+                "desc": "治疗次数:",
+                "defaultValue": 9
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "treatEffect",
+                "desc": "治疗特效:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "treatInterval",
+                "desc": "治疗间隔:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 26,
+        "desc": "对暗号安全区AI  拿主角身上的信息和NPC信息做对比",
+        "aiparam": [],
+        "baseData": ""
+    },
+    {
+        "type": 28,
+        "desc": "地雷AI 带延时",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "boomOnHit",
+                "desc": "是否接收伤害:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 29,
+        "desc": "16课Boss关卡雇佣兵AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "followDis",
+                "desc": "跟随距离",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "chaseSpeed",
+                "desc": "追击速度",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "chaseDis",
+                "desc": "追击距离",
+                "defaultValue": 0
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 30,
+        "desc": "16课近战怪物AI 接收声音事件 攻击视野最近且路径相通的角色",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isEnabledPriorityLogic",
+                "desc": "是否启用优先级:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isSendConveneEvent",
+                "desc": "发现敌人时是否发送召集事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "privateTags",
+                "list": [
+                    "privateTags"
+                ],
+                "isTemplate": false,
+                "attrName": "sendToPrivateTags",
+                "desc": "召集事件发送给私有标签的怪物:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isListenerConveneEvent",
+                "desc": "是否接收召集事件:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 32,
+        "desc": "带有仇恨列表的怪物",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteCirclePartolPathOwnPosition",
+                "desc": "闭合路线删除自身点:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "maxChaseDisOnAttack",
+                "desc": "追击时最大目标间隔距离:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "hateConfig": [
+                {
+                    "prop": "",
+                    "value": 10
+                }
+            ],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 37,
+        "desc": "(2)带有仇恨列表的怪物AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteCirclePartolPathOwnPosition",
+                "desc": "闭合路线删除自身点:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "maxChaseDisOnAttack",
+                "desc": "追击时最大目标间隔距离:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "hateConfig": [
+                {
+                    "prop": "",
+                    "value": 10
+                }
+            ],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 33,
+        "desc": "可持续放技能的怪物AI 第5课火焰怪使用",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 34,
+        "desc": "站着不动的蓄力炮塔",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 35,
+        "desc": "怪物医疗站AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "totalTreatNumber",
+                "desc": "治疗次数:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "treatEffect",
+                "desc": "医疗站特效:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "treatRoleEffect",
+                "desc": "怪物加血特效:",
+                "defaultValue": ""
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 36,
+        "desc": "17课近战怪物AI 应打尽打、仇恨值、召集功能、补血功能、找视野内仇恨值最高且路径相通",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "maxChaseDisOnAttack",
+                "desc": "追击时最大目标间隔距离:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isSendConveneEvent",
+                "desc": "发现敌人时是否发送召集事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "privateTags",
+                "list": [
+                    "privateTags"
+                ],
+                "isTemplate": false,
+                "attrName": "sendToPrivateTags",
+                "desc": "召集事件发送给私有标签的怪物:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isListenerConveneEvent",
+                "desc": "是否接收召集事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "roleLowHp",
+                "desc": "血量阈值:",
+                "defaultValue": -1
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteCirclePartolPathOwnPosition",
+                "desc": "闭合路线删除自身点:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "hateConfig": [
+                {
+                    "prop": "",
+                    "value": 10
+                }
+            ],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 38,
+        "desc": "无敌的怪物工厂 新增按组产怪功能",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isInvincible",
+                "desc": "是否使用无敌功能:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "weaknessDuration",
+                "desc": "虚弱状态的持续时间(ms):",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "eachGroupCount",
+                "desc": "每组的生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "eackGroupInterval",
+                "desc": "每组生产的间隔时间（ms）:",
+                "defaultValue": 5000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isDelayStart",
+                "desc": "是否延时启动:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "startProdDelay",
+                "desc": "启动延时(ms):",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isRandomFactoryParent",
+                "desc": "是否是父级工厂:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "attrName": "childFactoryIds",
+                "desc": "子级工厂:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "npc"
+                ],
+                "attrName": "triggerNpcIds",
+                "desc": "触发NPC:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延时开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报声音间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "onlyOneInPool",
+                "desc": "是否指定模版随机:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "attrName": "onlyOneInPoolTemplateId",
+                "desc": "指定模版:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMaxMonsterCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "factoryInvincibleEffect",
+                "desc": "保护罩特效:",
+                "defaultValue": "d3_res/effect/E_basemonster_huzhao.lh",
+                "isResource": true
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "默认",
+                        "value": "default"
+                    },
+                    {
+                        "label": "红色",
+                        "value": "red"
+                    },
+                    {
+                        "label": "黄色",
+                        "value": "yellow"
+                    },
+                    {
+                        "label": "蓝色",
+                        "value": "blue"
+                    },
+                    {
+                        "label": "绿色",
+                        "value": "green"
+                    }
+                ],
+                "attrName": "invincibleColor",
+                "desc": "无敌时信号器的颜色配置:",
+                "defaultValue": "default"
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "默认",
+                        "value": "default"
+                    },
+                    {
+                        "label": "红色",
+                        "value": "red"
+                    },
+                    {
+                        "label": "黄色",
+                        "value": "yellow"
+                    },
+                    {
+                        "label": "蓝色",
+                        "value": "blue"
+                    },
+                    {
+                        "label": "绿色",
+                        "value": "green"
+                    }
+                ],
+                "attrName": "weaknessColor",
+                "desc": "生产时信号器的颜色配置:",
+                "defaultValue": "default"
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            },
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ],
+            "emitEventOnReverse": [
+                {
+                    "type": "",
+                    "to": []
+                }
+            ]
+        }
+    },
+    {
+        "type": 39,
+        "desc": "炸药桶AI (当前怪物的血量需要确保能够接收一次伤害不死)",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 40,
+        "desc": "接受消息的真随机工厂",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "immediatelyComplete",
+                "desc": "是否立即完成(兼容隐身工厂使用):",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "eachGroupCount",
+                "desc": "每组的生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "eackGroupInterval",
+                "desc": "每组生产的间隔时间（ms）:",
+                "defaultValue": 5000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isRandomFactoryParent",
+                "desc": "是否是父级工厂:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "monster"
+                ],
+                "attrName": "childFactoryIds",
+                "desc": "子级工厂:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "npc"
+                ],
+                "attrName": "triggerNpcIds",
+                "desc": "触发NPC:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "delayOpenDoorAniTime",
+                "desc": "延时开门时间:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prodInterval",
+                "desc": "生产间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "warngingSoundsInterval",
+                "desc": "警报声音间隔:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "select",
+                "listType": "sound",
+                "list": [
+                    "sound"
+                ],
+                "attrName": "warningSounds",
+                "desc": "警报声音:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "onlyOneInPool",
+                "desc": "是否指定模版随机:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "attrName": "onlyOneInPoolTemplateId",
+                "desc": "指定模版:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMinMonsterCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prodMaxMonsterCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "collectRadius",
+                "desc": "集合点半径:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 41,
+        "desc": "可操作激光炮AI",
+        "aiparam": [
+            {
+                "attrType": "select",
+                "listType": "collect",
+                "attrName": "consumeGameItemType",
+                "desc": "消耗物品的类型:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "consumeGameItemCount",
+                "desc": "每次消耗数量:",
+                "defaultValue": 5
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "storingEffect",
+                "desc": "蓄力特效:",
+                "defaultValue": "",
+                "isResource": true
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 42,
+        "desc": "监视器炮塔AI(旋转-准备-打)",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "prepareAttackTime",
+                "desc": "准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "gunTurrenEffect",
+                "desc": "摄像头发呆特效:",
+                "defaultValue": "",
+                "isResource": true
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "patrol": {
+                "desc": "原地转圈",
+                "type": 5,
+                "patrolTurnSpeed": 333,
+                "isClockWise": true
+            }
+        }
+    },
+    {
+        "type": 43,
+        "desc": "(推荐)18课近战怪物AI 17课近战怪AI逻辑基础之上增加原地旋转逻辑",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isAcceptSoundEvent",
+                "desc": "是否接受声音事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "maxChaseDisOnAttack",
+                "desc": "追击时最大目标间隔距离:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isChangeAttacker",
+                "desc": "是否切换攻击对象:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isSendConveneEvent",
+                "desc": "发现敌人时是否发送召集事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "multiple",
+                "listType": "privateTags",
+                "list": [
+                    "privateTags"
+                ],
+                "isTemplate": false,
+                "attrName": "sendToPrivateTags",
+                "desc": "召集事件发送给私有标签的怪物:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isListenerConveneEvent",
+                "desc": "是否接收召集事件:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "roleLowHp",
+                "desc": "血量阈值:",
+                "defaultValue": -1
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteCirclePartolPathOwnPosition",
+                "desc": "闭合路线删除自身点:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteOverAgainPartolPathOwnPosition",
+                "desc": "反复路线删除自身点:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isPrepareState",
+                "desc": "是否开启警戒行为:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "prepareAttackTime",
+                "desc": "攻击准备时间:",
+                "defaultValue": 1000
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "gunTurrenEffect",
+                "desc": "警戒特效:",
+                "defaultValue": "d3_res/effect/E_tongyong_jingjie_head.lh",
+                "isResource": true
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "hateConfig": [
+                {
+                    "prop": "",
+                    "value": 10
+                }
+            ],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0,
+                "patrolTurnSpeed": 333,
+                "isClockWise": true
+            }
+        }
+    },
+    {
+        "type": 44,
+        "desc": "投石车AI",
+        "aiparam": [
+            {
+                "attrType": "select",
+                "listType": "collect",
+                "attrName": "consumeGameItemType",
+                "desc": "消耗物品的类型:",
+                "defaultValue": ""
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "consumeGameItemCount",
+                "desc": "每次消耗数量:",
+                "defaultValue": 5
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 45,
+        "desc": "白熊跳跃AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetX",
+                "desc": "每次跳跃x轴的水平位移距离:",
+                "defaultValue": 6.3
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetY",
+                "desc": "每次跳跃y轴的垂直位移距离:",
+                "defaultValue": 6.4
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "changeYChance",
+                "desc": "换路概率:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "跳跃的休息时间:",
+                "defaultValue": 2000
+            },
+            
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "addRepaxTimeOnOffsetConfig",
+                "desc": "偏移的补充休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "needChangeYOnHit",
+                "desc": "被击后下次一定偏移Y:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "水平排列",
+                        "value": "offserX"
+                    },
+                    {
+                        "label": "垂直排列",
+                        "value": "offsetY"
+                    }
+                ],
+                "attrName": "randomOffSetLocation",
+                "desc": "三条路的排列方向 （默认垂直方向）:",
+                "defaultValue": "offsetY"
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "上路",
+                        "value": "top"
+                    },
+                    {
+                        "label": "下路",
+                        "value": "bottom"
+                    },
+                    {
+                        "label": "中间",
+                        "value": "middle"
+                    },
+                    {
+                        "label": "左路",
+                        "value": "left"
+                    },
+                    {
+                        "label": "右路",
+                        "value": "right"
+                    }
+                ],
+                "attrName": "initLocation",
+                "desc": "初始化位置（默认中间）:",
+                "defaultValue": "middle"
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            }
+        }
+    },
+    {
+        "type": 46,
+        "desc": "青蛙跳跃AI(for class 11)",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetX",
+                "desc": "每次跳跃x轴的水平位移距离:",
+                "defaultValue": 6.3
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetY",
+                "desc": "每次跳跃y轴的垂直位移距离:",
+                "defaultValue": 6.4
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "changeYChance",
+                "desc": "换路概率:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "跳跃的休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "patrolRelaxDurationDelta",
+                "desc": "休息时间递减参数:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "addRepaxTimeOnYoffsetConfig",
+                "desc": "带Y偏移的补充休息时间:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            }
+        }
+    },
+    {
+        "type": 47,
+        "desc": "变色青蛙AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetX",
+                "desc": "每次跳跃x轴的水平位移距离:",
+                "defaultValue": 6.3
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetY",
+                "desc": "每次跳跃y轴的垂直位移距离:",
+                "defaultValue": 6.4
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "changeYChance",
+                "desc": "换路概率:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "跳跃的休息时间:",
+                "defaultValue": 2000
+            },
+            
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "addRepaxTimeOnOffsetConfig",
+                "desc": "偏移的补充休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "needChangeYOnHit",
+                "desc": "被击后下次一定偏移Y:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "水平排列",
+                        "value": "offserX"
+                    },
+                    {
+                        "label": "垂直排列",
+                        "value": "offsetY"
+                    }
+                ],
+                "attrName": "randomOffSetLocation",
+                "desc": "三条路的排列方向 （默认垂直方向）:",
+                "defaultValue": "offsetY"
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "上路",
+                        "value": "top"
+                    },
+                    {
+                        "label": "下路",
+                        "value": "bottom"
+                    },
+                    {
+                        "label": "中间",
+                        "value": "middle"
+                    },
+                    {
+                        "label": "左路",
+                        "value": "left"
+                    },
+                    {
+                        "label": "右路",
+                        "value": "right"
+                    }
+                ],
+                "attrName": "initLocation",
+                "desc": "初始化位置（默认中间）:",
+                "defaultValue": "middle"
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorGreenTagConfig",
+                "desc": "青蛙绿色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorRedTagConfig",
+                "desc": "青蛙红色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorBlueTagConfig",
+                "desc": "青蛙蓝色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "changeColorDelay",
+                "desc": "改变颜色的延迟切换时间:",
+                "defaultValue": 230
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            }
+        }
+    },
+    {
+        "type": 48,
+        "desc": "炮台青蛙AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prepareSkillTime",
+                "desc": "准备释放技能的时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "canAttackTarget",
+                "desc": "可攻击的目标:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "signPostionConfig": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 49,
+        "desc": "变色青蛙AI + 炮台青蛙AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetX",
+                "desc": "每次跳跃x轴的水平位移距离:",
+                "defaultValue": 6.3
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetY",
+                "desc": "每次跳跃y轴的垂直位移距离:",
+                "defaultValue": 6.4
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "changeYChance",
+                "desc": "换路概率:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "跳跃的休息时间:",
+                "defaultValue": 2000
+            },
+            
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "addRepaxTimeOnOffsetConfig",
+                "desc": "偏移的补充休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "needChangeYOnHit",
+                "desc": "被击后下次一定偏移Y:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "水平排列",
+                        "value": "offserX"
+                    },
+                    {
+                        "label": "垂直排列",
+                        "value": "offsetY"
+                    }
+                ],
+                "attrName": "randomOffSetLocation",
+                "desc": "三条路的排列方向 （默认垂直方向）:",
+                "defaultValue": "offsetY"
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "上路",
+                        "value": "top"
+                    },
+                    {
+                        "label": "下路",
+                        "value": "bottom"
+                    },
+                    {
+                        "label": "中间",
+                        "value": "middle"
+                    },
+                    {
+                        "label": "左路",
+                        "value": "left"
+                    },
+                    {
+                        "label": "右路",
+                        "value": "right"
+                    }
+                ],
+                "attrName": "initLocation",
+                "desc": "初始化位置（默认中间）:",
+                "defaultValue": "middle"
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorGreenTagConfig",
+                "desc": "青蛙绿色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorRedTagConfig",
+                "desc": "青蛙红色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorBlueTagConfig",
+                "desc": "青蛙蓝色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prepareSkillTime",
+                "desc": "准备释放技能的时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "canAttackTarget",
+                "desc": "可攻击的目标:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "changeColorDelay",
+                "desc": "改变颜色的延迟切换时间:",
+                "defaultValue": 230
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "两个",
+                        "value": true
+                    },
+                    {
+                        "label": "一个",
+                        "value": false
+                    }
+                ],
+                "attrName": "isAttackTwoDangerousArea",
+                "desc": "攻击时攻击点数量配置:",
+                "defaultValue": true
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "signPostionConfig": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 50,
+        "desc": "隐身怪物AI",
+        "aiparam": [],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 51,
+        "desc": "13课 精英怪-暴力兔 (最终版 带护盾技能)",
+        "states": [
+            "脸红",
+            "脸绿",
+            "脸黄"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_green",
+            "skill_yellow"
+        ],
+        "methods": [
+            "isFaceRed",
+            "isFaceGreen",
+            "isFaceYellow"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareRedSkillTime",
+                "desc": "BOSS脸红技能准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareGreenSkillTime",
+                "desc": "BOSS脸绿技能准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "roleLowHp",
+                "desc": "血量阈值:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "mainRoleGoToTargetDistance",
+                "desc": "主角到达侦查目标的阈值:",
+                "defaultValue": 6
+            },
+            {
+                "attrType": "select",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "detectTargetId",
+                "desc": "侦查目标id配置:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 52,
+        "desc": "巡逻追击的青蛙AI",
+        "aiparam": [
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorGreenTagConfig",
+                "desc": "青蛙绿色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorRedTagConfig",
+                "desc": "青蛙红色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorBlueTagConfig",
+                "desc": "青蛙蓝色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "changeColorDelay",
+                "desc": "改变颜色的延迟切换时间:",
+                "defaultValue": 230
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "jumpEndDelay",
+                "desc": "跳跃延迟结束时间:",
+                "defaultValue": 0
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            }
+        }
+    },
+    {
+        "type": 53,
+        "desc": "13课 精英怪-暴力兔 (简化版)",
+        "states": [
+            "脸红",
+            "脸绿"
+        ],
+        "skills": [
+            "skill_red",
+            "skill_green"
+        ],
+        "methods": [
+            "isFaceRed",
+            "isFaceGreen"
+        ],
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareRedSkillTime",
+                "desc": "BOSS脸红技能准备时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 100,
+                "attrName": "prepareGreenSkillTime",
+                "desc": "BOSS脸绿技能准备时间:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 54,
+        "desc": "14课-产怪AI,按照起始位置,和间隔，并且通知npc数量",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "startDelay",
+                "desc": "延迟启动时间 (负数禁用延迟启动):",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "angle",
+                "desc": "种怪位置延伸角度:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "minStartDis",
+                "desc": "最小开始偏移距离:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "maxStartDis",
+                "desc": "最大开始偏移距离:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "minProdCount",
+                "desc": "最小生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "maxProdCount",
+                "desc": "最大生产数量:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "minPerIntervalDis",
+                "desc": "最小间隔距离:",
+                "defaultValue": 0
+            },
+            {
+                "attrType": "number",
+                "step": 10,
+                "attrName": "maxPerIntervalDis",
+                "desc": "最大间隔距离:",
+                "defaultValue": 0
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "prodType": 0,
+            "prodPool": [
+                {
+                    "templateId": "",
+                    "chance": 0.5
+                }
+            ],
+            "start": {
+                "x": 0,
+                "y": 0
+            },
+            "collect": {
+                "x": 0,
+                "y": 0,
+                "radius": 5
+            }
+        }
+    },
+    {
+        "type": 55,
+        "desc": "15课青蛙AI",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetX",
+                "desc": "每次跳跃x轴的水平位移距离:",
+                "defaultValue": 6.3
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "offsetY",
+                "desc": "每次跳跃y轴的垂直位移距离:",
+                "defaultValue": 6.4
+            },
+            {
+                "attrType": "number",
+                "step": 0.1,
+                "attrName": "changeYChance",
+                "desc": "换路概率:",
+                "defaultValue": 1
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "跳跃的休息时间:",
+                "defaultValue": 2000
+            },
+            
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "addRepaxTimeOnOffsetConfig",
+                "desc": "偏移的补充休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "needChangeYOnHit",
+                "desc": "被击后下次一定偏移Y:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "水平排列",
+                        "value": "offserX"
+                    },
+                    {
+                        "label": "垂直排列",
+                        "value": "offsetY"
+                    }
+                ],
+                "attrName": "randomOffSetLocation",
+                "desc": "三条路的排列方向 （默认垂直方向）:",
+                "defaultValue": "offsetY"
+            },
+            {
+                "attrType": "select",
+                "listType": "constant",
+                "list": [
+                    {
+                        "label": "上路",
+                        "value": "top"
+                    },
+                    {
+                        "label": "下路",
+                        "value": "bottom"
+                    },
+                    {
+                        "label": "中间",
+                        "value": "middle"
+                    },
+                    {
+                        "label": "左路",
+                        "value": "left"
+                    },
+                    {
+                        "label": "右路",
+                        "value": "right"
+                    }
+                ],
+                "attrName": "initLocation",
+                "desc": "初始化位置（默认中间）:",
+                "defaultValue": "middle"
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorGreenTagConfig",
+                "desc": "青蛙绿色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorRedTagConfig",
+                "desc": "青蛙红色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "tag",
+                "list": [
+                    "tag"
+                ],
+                "attrName": "colorBlueTagConfig",
+                "desc": "青蛙蓝色时的tag:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "spriteProp",
+                "list": [
+                    "spriteProp"
+                ],
+                "attrName": "colorGreenPropConfig",
+                "desc": "青蛙绿色时的属性:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "spriteProp",
+                "list": [
+                    "spriteProp"
+                ],
+                "attrName": "colorRedPropConfig",
+                "desc": "青蛙红色时的属性:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "spriteProp",
+                "list": [
+                    "spriteProp"
+                ],
+                "attrName": "colorBluePropConfig",
+                "desc": "青蛙蓝色时的属性:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "prepareSkillTime",
+                "desc": "准备释放技能的时间:",
+                "defaultValue": 3000
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "canAttackTarget",
+                "desc": "可攻击的目标:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "changeColorDelay",
+                "desc": "改变颜色的延迟切换时间:",
+                "defaultValue": 230
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "greenColorCanAttackTargetIds",
+                "desc": "变绿时可攻击的目标:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "redColorCanAttackTargetIds",
+                "desc": "变红时可攻击的目标:",
+                "defaultValue": []
+            },
+            {
+                "attrType": "multiple",
+                "listType": "sprite",
+                "list": [
+                    "all"
+                ],
+                "isTemplate": false,
+                "attrName": "blueColorCanAttackTargetIds",
+                "desc": "变蓝时可攻击的目标:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": []
+        }
+    },
+    {
+        "type": 56,
+        "desc": "(2)带有仇恨列表的怪物AI  可配置吸收伤害类型",
+        "aiparam": [
+            {
+                "attrType": "number",
+                "step": 1,
+                "attrName": "hitExploedMax",
+                "desc": "受击自爆的最大次数:",
+                "defaultValue": 3
+            },
+            {
+                "attrType": "number",
+                "step": 0.5,
+                "attrName": "eachHitViewScaleRiseCount",
+                "desc": "每次受击体积增长的值:",
+                "defaultValue": 0.5
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "deleteCirclePartolPathOwnPosition",
+                "desc": "闭合路线删除自身点:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomChaseEnable",
+                "desc": "启用追击随机目标周围随机位置:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "randomPartolRealxEnable",
+                "desc": "启用巡逻随机时间休息:",
+                "defaultValue": false
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "patrolRelaxDuration",
+                "desc": "巡逻随机休息时间:",
+                "defaultValue": 2000
+            },
+            {
+                "attrType": "number",
+                "step": 1000,
+                "attrName": "maxChaseDisOnAttack",
+                "desc": "追击时最大目标间隔距离:",
+                "defaultValue": 2000
+            }
+        ],
+        "baseData": {
+            "emitEventOnStartProd": [],
+            "newHateConfig": [
+                {
+                    "prop": "",
+                    "initValue": 10,
+                    "hitValue": 10
+                }
+            ],
+            "chase": {
+                "dis": 0,
+                "speed": 0
+            },
+            "patrol": {
+                "desc": "不巡逻",
+                "type": 0
+            }
+        }
+    },
+    {
+        "type": 57,
+        "desc": "小土堆AI",
+        "aiparam": [
+        ],
+        "baseData": {
+        }
+    },
+    {
+        "type": 58,
+        "desc": "接收释放技能事件的怪物AI",
+        "aiparam": [
+            {
+                "attrType": "multiple",
+                "listType": "privateTags",
+                "list": [
+                    "privateTags"
+                ],
+                "isTemplate": false,
+                "attrName": "canAttackTargetPrivateTag",
+                "desc": "攻击目标的私有标签配置:",
+                "defaultValue": []
+            }
+        ],
+        "baseData": {
+        }
+    },
+    {
+        "type": 59,
+        "desc": "滚木AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isPlayBornAnimation",
+                "desc": "是否播放出生动作:",
+                "defaultValue": true
+            },
+            {
+                "attrType": "select",
+                "listType": "effect",
+                "list": [
+                    "effect"
+                ],
+                "attrName": "moveEffect",
+                "desc": "移动特效:",
+                "defaultValue": "",
+                "isResource": true
+            }
+        ],
+        "baseData": {
+            "signPostionConfig": [
+                {
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    },
+    {
+        "type": 60,
+        "desc": "召唤器AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isInVisibility",
+                "desc": "是否隐身:",
+                "defaultValue": true
+            }
+        ],
+        "baseData": {
+        }
+    },
+    {
+        "type": 61,
+        "desc": "受击就放技能的怪物AI",
+        "aiparam": [
+            {
+                "attrType": "boolean",
+                "listType": "constant",
+                "transVal": false,
+                "list": [
+                    {
+                        "label": "是",
+                        "value": true
+                    },
+                    {
+                        "label": "否",
+                        "value": false
+                    }
+                ],
+                "attrName": "isInVisibility",
+                "desc": "是否隐身:",
+                "defaultValue": false
+            }
+        ],
+        "baseData": {
+        }
+    }
+]

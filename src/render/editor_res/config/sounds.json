@@ -1,0 +1,82 @@
+[
+	{
+		"desc": "无",
+		"path": ""
+	},
+	{
+		"desc": "卡卡死亡音效",
+		"path": "sounds/dead.mp3"
+	},
+	{
+		"desc": "进入安全区音效",
+		"path": "sounds/anquandian.mp3"
+	},
+	{
+		"desc": "怪物基地死亡音效",
+		"path": "sounds/monster_base_dead.mp3"
+	},
+	{
+		"desc": "炸弹怪死亡音效",
+		"path": "sounds/monster_bomb_dead.mp3"
+	},
+	{
+		"desc": "摄像头怪死亡音效",
+		"path": "sounds/monster_camera_dead.mp3"
+	},
+	{
+		"desc": "卡普鲁斯怪死亡音效",
+		"path": "sounds/monster_cuperus_dead.mp3"
+	},
+	{
+		"desc": "怪物基地警报音效",
+		"path": "sounds/monster_base_alarm.mp3"
+	},
+	{
+		"desc": "摄像头怪警报音效",
+		"path": "sounds/monster_camera_alarm.mp3"
+	},
+	{
+		"desc": "薇薇死亡音效",
+		"path": "sounds/ww_die.mp3"
+	},
+	{
+		"desc": "NPC求救音效",
+		"path": "sounds/help.mp3"
+	},
+	{
+		"desc": "章鱼怪死亡音效",
+		"path": "sounds/monster_octopus_dead.mp3"
+	},
+	{
+		"desc": "NPC求救音效1",
+		"path": "sounds/help1.mp3"
+	},
+	{
+		"desc": "NPC求救音效2",
+		"path": "sounds/help2.mp3"
+	},
+	{
+		"desc": "仙人掌死亡",
+		"path": "sounds/cactus_die.mp3"
+	},
+	{
+		"desc": "仙人掌boss死亡",
+		"path": "sounds/cactus_boss_die.mp3"
+	},
+	{
+		"desc": "npc死亡",
+		"path": "sounds/npc_die.mp3"
+	},
+	{
+		"desc": "地刺音效",
+		"path": "sounds/monster_seal_attack.mp3"
+	},
+	{
+		"desc": "反叛军死亡音效",
+		"path": "sounds/monster_traitor_die.mp3"
+	},
+	{
+		"desc": "污水流动音效",
+		"path": "sounds/wushui.mp3"
+	}
+]

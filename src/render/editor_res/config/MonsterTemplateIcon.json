@@ -1,0 +1,82 @@
+[
+    {
+        "type": "无",
+        "url": null,
+        "desc": null
+    },
+    {
+        "type": "仙人掌Boss头像",
+        "url": "level_res/level_ui/img_icon_cactus_boss.png",
+        "desc": "仙人掌怪物,攻击力低,移速快"
+    },
+    {
+        "type": "仙人球头像",
+        "url": "level_res/level_ui/img_icon_cactus.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "幽灵头像",
+        "url": "level_res/level_ui/img_icon_ghost.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "雪怪头像",
+        "url": "level_res/level_ui/img_icon_snow.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "蓝精灵头像",
+        "url": "level_res/level_ui/img_icon_bluesprite.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "基地小怪头像",
+        "url": "level_res/level_ui/img_icon_base_son.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "炸弹怪头像",
+        "url": "level_res/level_ui/img_icon_bomb.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "摄像头头像",
+        "url": "level_res/level_ui/img_icon_camera.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "卡普鲁斯星人头像",
+        "url": "level_res/level_ui/img_icon_cuperus.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "蓝章鱼头像",
+        "url": "level_res/level_ui/img_icon_octopus_blue.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "棕章鱼头像",
+        "url": "level_res/level_ui/img_icon_octopus_brown.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "绿章鱼头像",
+        "url": "level_res/level_ui/img_icon_octopus_glass.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "紫章鱼Boss头像",
+        "url": "level_res/level_ui/img_icon_octopus_purple.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "红章鱼头像",
+        "url": "level_res/level_ui/img_icon_octopus_red.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    },
+    {
+        "type": "火焰小怪头像",
+        "url": "level_res/level_ui/img_icon_fireMonster.png",
+        "desc": "普通怪物,攻击力高,移速慢,血量高"
+    }
+]

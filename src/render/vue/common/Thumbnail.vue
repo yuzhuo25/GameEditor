@@ -1,22 +1,21 @@
 <template>
-  <li class="thumbnail_sprite">
-      <a-avatar v-if="url" shape="square" :size="40" :src="url" />
-  </li>
+      <a-avatar
+        v-if="url"
+        :size="36"
+        shape="square"
+        :src="url" />
+ 
 </template>
 <script>
+import {ref} from "vue"
 export default {
-  props: ['url']
+  props: ['url', 'active'],
+
+  setup() {
+    const rootFile = ref('file://' + localStorage.getItem("rootFile"));
+    return {
+      rootFile
+    }
+  }
 }
 </script>
-<style>
-.thumbnail_sprite{
-  height: 40px;
-  width: 40px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  display:inline-block;
-}
-</style>
-
-
-

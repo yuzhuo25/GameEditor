@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/welcome/.nvm/versions/node/v15.0.1/bin/node /usr/local/bin/yarn dev
+  /Users/welcome/.nvm/versions/node/v15.0.1/bin/node /usr/local/bin/yarn i node-xlsx -S
 
 PATH: 
-  /Users/welcome/.nvm/versions/node/v15.0.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/mysql/bin:/usr/local/mysql/bin
+  /Users/welcome/.nvm/versions/node/v15.0.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/mysql/bin
 
 Yarn version: 
   1.5.1

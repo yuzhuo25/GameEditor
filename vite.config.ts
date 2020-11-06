@@ -1,12 +1,13 @@
 /**
  * 参考链接: https://github.com/vitejs/vite/blob/master/src/node/config.ts
  */
-import { join } from 'path'
+import path,{ join } from 'path'
 import { UserConfig } from 'vite'
 import dotenv from 'dotenv'
 
 dotenv.config({ path: join(__dirname, '.env') })
-const root = join(__dirname, 'src/render')
+const root = join(__dirname, 'src/render');
+const localFile = 'file:///Users/welcome/kkcode_live_game_client/bin/'
 
 const config: UserConfig = {
   root,
@@ -22,6 +23,7 @@ const config: UserConfig = {
     '/lib/': join(__dirname, 'src/render/lib'),
     '/utils/': join(__dirname, 'src/render/utils'),
     '/views/': join(__dirname, 'src/render/views'),
+    '/editor_res/': join(localFile, 'views'),
   },
   optimizeDeps: {
     
@@ -64,6 +66,13 @@ const config: UserConfig = {
   rollupOutputOptions: {
     format: 'commonjs',
   },
+  // proxy:{
+  //   '/editor_res': {
+  //     target: `http://127.0.0.1:8088/editor_res`,
+  //     changeOrigin: true,
+  //     rewrite: _ => path.resolve(localFile, '/editor_res/')
+  //   }
+  // }
 }
 
 export default config

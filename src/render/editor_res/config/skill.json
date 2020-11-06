@@ -1,0 +1,638 @@
+[
+	{
+		"desc": "卡卡双刀斩",
+		"path": "kaka_nanhai_attack.json",
+		"ifSkillDesc": "双刀斩",
+		"skillId": "attack"
+	},
+	{
+		"desc": "卡卡弧月斩",
+		"path": "kaka_nanhai_attack2.json",
+		"ifSkillDesc": "弧月斩",
+		"skillId": "attack2"
+	},
+	{
+		"desc": "卡卡十字斩",
+		"path": "kaka_nanhai_attack3.json",
+		"ifSkillDesc": "十字斩",
+		"skillId": "attack3"
+	},
+	{
+		"desc": "卡卡速射技能",
+		"path": "kaka_nanhai_s3.json",
+		"ifSkillDesc": "速射",
+		"skillId": "s3"
+	},
+	{
+		"desc": "卡卡速射技能绿色",
+		"path": "kaka_nanhai_s3_green.json",
+		"ifSkillDesc": "速射",
+		"skillId": "s3_green"
+	},
+	{
+		"desc": "卡卡速射技能红色",
+		"path": "kaka_nanhai_s3_red.json",
+		"ifSkillDesc": "速射",
+		"skillId": "s3_red"
+	},
+	{
+		"desc": "卡卡速射技能蓝色",
+		"path": "kaka_nanhai_s3_blue.json",
+		"ifSkillDesc": "速射",
+		"skillId": "s3_blue"
+	},
+	{
+		"desc": "卡卡群攻技能",
+		"path": "kaka_nanhai_aoe.json",
+		"ifSkillDesc": "横扫千军",
+		"skillId": "aoe"
+	},
+	{
+		"desc": "卡卡重击技能",
+		"path": "kaka_nanhai_s5.json",
+		"ifSkillDesc": "重击",
+		"skillId": "s5"
+	},
+	{
+		"desc": "卡卡灭火技能",
+		"path": "fire_fighting.json",
+		"ifSkillDesc": "灭火",
+		"skillId": "fire_fighting"
+	},
+	{
+		"desc": "薇薇射击",
+		"path": "weiwei_s5.json",
+		"ifSkillDesc": "射击",
+		"skillId": "s5"
+	},
+	{
+		"desc": "薇薇速射技能",
+		"path": "weiwei_s3.json",
+		"ifSkillDesc": "速射",
+		"skillId": "s3"
+	},
+	{
+		"desc": "薇薇普通激光炮",
+		"path": "weiwei_attack.json",
+		"ifSkillDesc": "激光炮",
+		"skillId": "attack"
+	},
+	{
+		"desc": "薇薇加强激光炮",
+		"path": "weiwei_attack_plus.json",
+		"ifSkillDesc": "加强激光炮",
+		"skillId": "attack_plus"
+	},
+	{
+		"desc": "薇薇集束火炮",
+		"path": "weiwei_attack_plus_consume.json",
+		"ifSkillDesc": "集束火炮",
+		"skillId": "attack_plus_consume"
+	},
+	{
+		"desc": "薇薇弹雨漫步",
+		"path": "weiwei_aoe.json",
+		"ifSkillDesc": "弹雨漫步",
+		"skillId": "aoe"
+	},
+	{
+		"desc": "主角驾驶开炮技能(激光)",
+		"path": "role_cannon_s1.json",
+		"ifSkillDesc": "主角开炮(激光)",
+		"skillId": "role_cannon_s1"
+	},
+	{
+		"desc": "主角驾驶开炮技能(紫色激光)",
+		"path": "role_cannon_s1_purple.json",
+		"ifSkillDesc": "主角开炮(紫色激光)",
+		"skillId": "role_cannon_s1_purple"
+	},
+	{
+		"desc": "主角驾驶开炮技能(绿色激光)",
+		"path": "role_cannon_s1_green.json",
+		"ifSkillDesc": "主角开炮(绿色激光)",
+		"skillId": "role_cannon_s1_green"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水)",
+		"path": "role_cannon_s1_water.json",
+		"ifSkillDesc": "主角开炮(水)",
+		"skillId": "role_cannon_s1_water"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水_无特效)",
+		"path": "role_cannon_s1_water_no_effect.json",
+		"ifSkillDesc": "主角开炮(水)",
+		"skillId": "role_cannon_s1_water_no_effect"
+	},
+	{
+		"desc": "主角驾驶开炮技能(火)",
+		"path": "role_cannon_s1_fire.json",
+		"ifSkillDesc": "主角开炮(火)",
+		"skillId": "role_cannon_s1_fire"
+	},
+	{
+		"desc": "主角驾驶开炮技能(火_无特效)",
+		"path": "role_cannon_s1_fire_no_effect.json",
+		"ifSkillDesc": "主角开炮(火)",
+		"skillId": "role_cannon_s1_fire_no_effect"
+	},
+	{
+		"desc": "主角驾驶开炮技能(蓄力激光)",
+		"path": "role_cannon_s1_storing.json",
+		"ifSkillDesc": "主角开炮(蓄力激光)",
+		"skillId": "role_cannon_s1_storing"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平激光)",
+		"path": "role_cannon_s1_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平激光)",
+		"skillId": "role_cannon_s1_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平紫色激光)",
+		"path": "role_cannon_s1_purple_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平紫色激光)",
+		"skillId": "role_cannon_s1_purple_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平绿色激光)",
+		"path": "role_cannon_s1_green_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平绿色激光)",
+		"skillId": "role_cannon_s1_green_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平水)",
+		"path": "role_cannon_s1_water_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平水)",
+		"skillId": "role_cannon_s1_water_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平火)",
+		"path": "role_cannon_s1_fire_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平火)",
+		"skillId": "role_cannon_s1_fire_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(水平蓄力激光)",
+		"path": "role_cannon_s1_storing_horizontal.json",
+		"ifSkillDesc": "主角开炮(水平蓄力激光)",
+		"skillId": "role_cannon_s1_storing_horizontal"
+	},
+	{
+		"desc": "主角驾驶开炮技能(抛物线)",
+		"path": "role_cannon_s2.json",
+		"ifSkillDesc": "主角开炮(抛物线)",
+		"skillId": "role_cannon_s2"
+	},
+	{
+		"desc": "主角开炮(抛物线改CD1)",
+		"path": "role_cannon_s2_cd1.json",
+		"ifSkillDesc": "开炮",
+		"skillId": "role_cannon_s2"
+	},
+	{
+		"desc": "主角开炮(抛物线改伤害自身阵营)",
+		"path": "role_cannon_s2_cd2.json",
+		"ifSkillDesc": "开炮",
+		"skillId": "role_cannon_s2"
+	},
+	{
+		"desc": "主角开炮(抛物线改距离1)",
+		"path": "role_cannon_s2_d1.json",
+		"ifSkillDesc": "开炮",
+		"skillId": "role_cannon_s2"
+	},
+	{
+		"desc": "主角开炮(蓄力穿透激光)",
+		"path": "role_cannon_s6_storing.json",
+		"ifSkillDesc": "开炮",
+		"skillId": "role_cannon_s6_storing"
+	},
+	{
+		"desc": "通用扔石头",
+		"path": "tongyong_throw.json",
+		"ifSkillDesc": "扔石头",
+		"skillId": "tongyong_throw"
+	},
+	{
+		"desc": "UU的传送技能",
+		"path": "monster_UU_attack.json",
+		"ifSkillDesc": "UU攻击",
+		"skillId": "monster_UU_attack"
+	},
+	{
+		"desc": "罐子攻击技能",
+		"path": "pot_boom.json",
+		"ifSkillDesc": "罐子爆炸技能",
+		"skillId": "pot_boom"
+	},
+	{
+		"desc": "罐子攻击技能(无音效)",
+		"path": "pot_boom_no_sound.json",
+		"ifSkillDesc": "罐子爆炸技能",
+		"skillId": "pot_boom_no_sound"
+	},
+	{
+		"desc": "医疗点治疗技能",
+		"path": "monster_treat_attack.json",
+		"ifSkillDesc": "治疗",
+		"skillId": "monster_UU_attack"
+	},
+	{
+		"desc": "医疗点群体治疗技能",
+		"path": "monster_treatMassive_attack.json",
+		"ifSkillDesc": "医疗点群体治疗技能",
+		"skillId": "monster_treatMassive_attack"
+	},
+	{
+		"desc": "塔攻击技能",
+		"path": "monster_towermonster_attack.json",
+		"ifSkillDesc": "塔攻击技能",
+		"skillId": "monster_towermonster_attack"
+	},
+	{
+		"desc": "地雷攻击技能",
+		"path": "monster_landmine_attack.json",
+		"ifSkillDesc": "地雷攻击技能",
+		"skillId": "monster_landmine_attack"
+	},
+	{
+		"desc": "通用召唤",
+		"path": "tongyong_callmonster.json",
+		"ifSkillDesc": "通用召唤",
+		"skillId": "tongyong_callMonster"
+	},
+	{
+		"desc": "通用召唤（无特效）",
+		"path": "tongyong_callmonster_exclude_effect.json",
+		"ifSkillDesc": "通用召唤",
+		"skillId": "tongyong_callmonster_exclude_effect"
+	},
+	{
+		"desc": "炸弹怪自爆技能",
+		"path": "monster_bomb_attack.json",
+		"ifSkillDesc": "炸弹怪自爆",
+		"skillId": "monster_bomb_attack"
+	},
+	{
+		"desc": "炸弹怪自爆技能2(无逻辑声音)",
+		"path": "monster_bomb_attack2.json",
+		"ifSkillDesc": "炸弹怪自爆",
+		"skillId": "monster_bomb_attack"
+	},
+	{
+		"desc": "摄像头怪攻击技能",
+		"path": "monster_attack_light.json",
+		"ifSkillDesc": "怪物普通攻击技能闪光",
+		"skillId": "monster_skill light"
+	},
+	{
+		"desc": "摄像头怪无伤害攻击技能",
+		"path": "monster_camera_nodamage.json",
+		"ifSkillDesc": "怪物普通攻击技能闪光(没有伤害)",
+		"skillId": "monster_skill light"
+	},
+	{
+		"desc": "卡普鲁斯星怪攻击技能",
+		"path": "monster_cuperus_attack.json",
+		"ifSkillDesc": "cuperus攻击",
+		"skillId": "monster_cuperus_attack"
+	},
+	{
+		"desc": "卡普鲁斯星怪攻击长cd",
+		"path": "monster_cuperus_attack1.json",
+		"ifSkillDesc": "cuperus攻击长CD",
+		"skillId": "monster_cuperus_attack"
+	},
+	{
+		"desc": "闪电链技能",
+		"path": "monster_lighting_attack.json",
+		"ifSkillDesc": "闪电链技能",
+		"skillId": "monster_lighting_attack"
+	},
+	{
+		"desc": "加农炮攻击技能",
+		"path": "monster_cannon_attack.json",
+		"ifSkillDesc": "cannon攻击",
+		"skillId": "monster_cannon_attack"
+	},
+	{
+		"desc": "加农炮Boss攻击技能",
+		"path": "monster_cannonboss_attack.json",
+		"ifSkillDesc": "cannonboss攻击",
+		"skillId": "monster_cannonboss_attack"
+	},
+	{
+		"desc": "加农炮Boss蓄力激光技能",
+		"path": "monster_cannonboss_s1.json",
+		"ifSkillDesc": "加农炮Boss蓄力激光技能",
+		"skillId": "monster_cannonboss_s1"
+	},
+	{
+		"desc": "加农炮Boss蓄力激光技能(无蓄力特效)",
+		"path": "monster_cannonboss_s1_no_storing_effect.json",
+		"ifSkillDesc": "加农炮Boss蓄力激光技能(无蓄力特效)",
+		"skillId": "monster_cannonboss_s1"
+	},
+	{
+		"desc": "加农炮Boss抛物线炮弹技能",
+		"path": "monster_cannonboss_s2.json",
+		"ifSkillDesc": "加农炮Boss抛物线炮弹技能",
+		"skillId": "monster_cannonboss_s1"
+	},
+	{
+		"desc": "基地产小怪攻击技能",
+		"path": "monster_base_son_attack.json",
+		"ifSkillDesc": "怪物基地生出的小怪攻击技能",
+		"skillId": "attack"
+	},
+	{
+		"desc": "章鱼怪攻击技能",
+		"path": "monster_octopus_attack.json",
+		"ifSkillDesc": "章鱼攻击",
+		"skillId": "monster_octopus_attack"
+	},
+	{
+		"desc": "章鱼怪长cd攻击技能",
+		"path": "monster_octopus_attack_long.json",
+		"ifSkillDesc": "章鱼攻击",
+		"skillId": "monster_octopus_attack"
+	},
+	{
+		"desc": "紫色章鱼怪攻击技能",
+		"path": "monster_octopus_purple_attack.json",
+		"ifSkillDesc": "紫色章鱼攻击",
+		"skillId": "monster_octopus_purple_attack"
+	},
+	{
+		"desc": "先知怪攻击技能",
+		"path": "monster_sage_attack.json",
+		"ifSkillDesc": "先知攻击",
+		"skillId": "monster_sage_attack"
+	},
+	{
+		"desc": "先知怪冰系攻击技能",
+		"path": "monster_sage_attack_ice.json",
+		"ifSkillDesc": "先知冰系攻击",
+		"skillId": "monster_sage_attack_ice"
+	},
+	{
+		"desc": "先知怪水系攻击技能",
+		"path": "monster_sage_attack_water.json",
+		"ifSkillDesc": "先知水系攻击",
+		"skillId": "monster_sage_attack_water"
+	},	
+	{
+		"desc": "先知怪激光攻击技能",
+		"path": "monster_sage_s2.json",
+		"ifSkillDesc": "先知怪激光攻击",
+		"skillId": "monster_sage_s2"
+	},
+	{
+		"desc": "村民怪攻击技能",
+		"path": "monster_villager_attack.json",
+		"ifSkillDesc": "村民攻击",
+		"skillId": "monster_villager_attack"
+	},
+	{
+		"desc": "村民怪扔标枪技能",
+		"path": "monster_villager_s1.json",
+		"ifSkillDesc": "村民怪扔标枪",
+		"skillId": "monster_villager_s1"
+	},
+	{
+		"desc": "仙人掌怪攻击技能",
+		"path": "monster_cactus_attack.json",
+		"ifSkillDesc": "仙人掌攻击",
+		"skillId": "monster_cactus_attack"
+	},
+	{
+		"desc": "仙人掌boss攻击技能",
+		"path": "monster_cactus_boss_attack.json",
+		"ifSkillDesc": "仙人掌boss攻击",
+		"skillId": "monster_cactus_boss_attack"
+	},
+	{
+		"desc": "蓝精灵攻击技能",
+		"path": "monster_bluesprite_attack.json",
+		"ifSkillDesc": "蓝精灵攻击",
+		"skillId": "monster_bluesprite_attack"
+	},
+	{
+		"desc": "雪怪攻击技能",
+		"path": "monster_snow_attack.json",
+		"ifSkillDesc": "雪怪攻击",
+		"skillId": "monster_snow_attack"
+	},
+	{
+		"desc": "企鹅攻击技能",
+		"path": "monster_penguin_attack.json",
+		"ifSkillDesc": "企鹅攻击",
+		"skillId": "monster_penguin_attack"
+	},
+	{
+		"desc": "海豹攻击技能",
+		"path": "monster_seal_attack.json",
+		"ifSkillDesc": "海豹攻击",
+		"skillId": "monster_seal_attack"
+	},
+	{
+		"desc": "鬼攻击技能",
+		"path": "monster_ghost_attack.json",
+		"ifSkillDesc": "鬼攻击",
+		"skillId": "monster_ghost_attack"
+	},
+	{
+		"desc": "熊攻击技能",
+		"path": "monster_bear_attack.json",
+		"ifSkillDesc": "熊攻击",
+		"skillId": "monster_bear_attack"
+	},
+	{
+		"desc": "兔子攻击技能",
+		"path": "class12_boss_attack.json",
+		"ifSkillDesc": "兔子普通攻击",
+		"skillId": "class12_boss_attack"
+	},
+	{
+		"desc": "兔子绿色技能",
+		"path": "class12_boss_green.json",
+		"ifSkillDesc": "兔子绿色攻击",
+		"skillId": "class12_boss_green"
+	},
+	{
+		"desc": "兔子红色技能",
+		"path": "class12_boss_red.json",
+		"ifSkillDesc": "兔子红色攻击",
+		"skillId": "class12_boss_red"
+	},
+	{
+		"desc": "兔子黄色技能",
+		"path": "class12_boss_yellow.json",
+		"ifSkillDesc": "兔子黄色攻击",
+		"skillId": "class12_boss_yellow"
+	},
+	{
+		"desc": "火焰技能",
+		"path": "fire_skill.json",
+		"ifSkillDesc": "火焰技能",
+		"skillId": "fire_skill"
+	},
+	{
+		"desc": "火焰怪技能",
+		"path": "monster_firemonster_attack.json",
+		"ifSkillDesc": "火焰怪技能",
+		"skillId": "monster_firemonster_attack"
+	},
+	{
+		"desc": "火焰BOSS攻击技能",
+		"path": "class13_boss_attack.json",
+		"ifSkillDesc": "火焰BOSS攻击技能",
+		"skillId": "class13_boss_attack"
+	},
+	{
+		"desc": "火焰BOSS绿色技能",
+		"path": "class13_boss_green.json",
+		"ifSkillDesc": "火焰BOSS绿色技能",
+		"skillId": "class13_boss_green"
+	},
+	{
+		"desc": "火焰BOSS红色技能",
+		"path": "class13_boss_red.json",
+		"ifSkillDesc": "火焰BOSS红色技能",
+		"skillId": "class13_boss_red"
+	},
+	{
+		"desc": "火焰BOSS紫色技能",
+		"path": "class13_boss_violet.json",
+		"ifSkillDesc": "火焰BOSS紫色技能",
+		"skillId": "class13_boss_violet"
+	},
+	{
+		"desc": "机器人攻击技能",
+		"path": "monster_robot_attack.json",
+		"ifSkillDesc": "机器人攻击技能",
+		"skillId": "monster_robot_attack"
+	},
+	{
+		"desc": "机器BOSS普通攻擊技能",
+		"path": "class14_boss_attack.json",
+		"ifSkillDesc": "机器BOSS普通攻擊技能",
+		"skillId": "attack"
+	},
+	{
+		"desc": "炎魔BOSS普通攻击技能",
+		"path": "class16_boss_attack.json",
+		"ifSkillDesc": "炎魔BOSS普通攻击技能",
+		"skillId": "attack"
+	},
+	{
+		"desc": "炎魔BOSS蓝色环形技能",
+		"path": "class16_boss_blue.json",
+		"ifSkillDesc": "炎魔BOSS蓝色环形技能",
+		"skillId": "class16_boss_blue"
+	},
+	{
+		"desc": "炎魔BOSS红色重击技能",
+		"path": "class16_boss_red.json",
+		"ifSkillDesc": "炎魔BOSS红色重击技能",
+		"skillId": "class16_boss_red"
+	},
+	{
+		"desc": "炎魔BOSS黄色召唤技能",
+		"path": "class16_boss_yellow.json",
+		"ifSkillDesc": "炎魔BOSS黄色召唤技能",
+		"skillId": "class16_boss_yellow"
+	},
+	{
+		"desc": "狗的吼叫技能(范围：12)",
+		"path": "dog_s3.json",
+		"ifSkillDesc": "狗的吼叫技能(范围：12)",
+		"skillId": "s3"
+	},
+	{
+		"desc": "狗的吼叫技能(范围：20)",
+		"path": "dog_s3_20.json",
+		"ifSkillDesc": "狗的吼叫技能(范围：20)",
+		"skillId": "s3"
+	},
+	{
+		"desc": "油桶自爆技能",
+		"path": "monster_oil_durm_s1.json",
+		"ifSkillDesc": "油桶自爆技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "石头法师技能",
+		"path": "monster_stone_mage_s1.json",
+		"ifSkillDesc": "石头法师技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "石头战士技能",
+		"path": "monster_stone_warrior_s1.json",
+		"ifSkillDesc": "石头战士技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "雷电塔技能",
+		"path": "monster_lighting_tower_attack.json",
+		"ifSkillDesc": "雷电塔技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "大眼怪技能",
+		"path": "monster_bigeye_attack.json",
+		"ifSkillDesc": "大眼怪技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "投石车技能",
+		"path": "cataput_attack.json",
+		"ifSkillDesc": "投石车技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "青蛙攻击技能",
+		"path": "monster_frog_s1.json",
+		"ifSkillDesc": "青蛙攻击技能",
+		"skillId": "s1"
+	},
+	{
+		"desc": "青蛙砸地攻击技能",
+		"path": "monster_frog_s2.json",
+		"ifSkillDesc": "青蛙砸地攻击技能",
+		"skillId": "s2"
+	},
+	{
+		"desc": "冰球怪技能",
+		"path": "monster_icemonster_attack.json",
+		"ifSkillDesc": "冰球怪技能",
+		"skillId": "monster_icemonster_attack"
+	},
+	{
+		"desc": "火焰怪自爆技能(自爆AI专用)",
+		"path": "monster_fire_self_explosion.json",
+		"ifSkillDesc": "火焰怪自爆",
+		"skillId": "monster_fire_self_explosion"
+	},
+	{
+		"desc": "冰焰怪自爆技能(自爆AI专用)",
+		"path": "monster_ice_self_explosion.json",
+		"ifSkillDesc": "冰焰怪自爆",
+		"skillId": "monster_ice_self_explosion"
+	},
+	{
+		"desc": "滚木技能(矩形范围伤害，无特效)",
+		"path": "monster_rollingwood_attack.json",
+		"ifSkillDesc": "滚木技能",
+		"skillId": "monster_rollingwood_attack"
+	},
+	{
+		"desc": "红水晶爆炸",
+		"path": "monster_crystal_red_attack.json",
+		"ifSkillDesc": "红水晶爆炸",
+		"skillId": "monster_crystal_red_attack"
+	}
+]

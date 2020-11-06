@@ -1,0 +1,70 @@
+[
+    {
+        "desc": "站立动作",
+        "value": "stand"
+    },
+    {
+        "desc": "跑步动作",
+        "value": "run"
+    },
+    {
+        "desc": "行走动作",
+        "value": "walk"
+    },
+    {
+        "desc": "死亡动作",
+        "value": "die"
+    },
+    {
+        "desc": "哭泣动作",
+        "value": "cry"
+    },
+    {
+        "desc": "采集动作",
+        "value": "pickup"
+    },
+    {
+        "desc": "被击动作",
+        "value": "hit"
+    },
+    {
+        "desc": "技能s1动作",
+        "value": "s1"
+    },
+    {
+        "desc": "技能s2动作",
+        "value": "s2"
+    },
+    {
+        "desc": "技能s3动作",
+        "value": "s3"
+    },
+    {
+        "desc": "技能s4动作",
+        "value": "s4"
+    },
+    {
+        "desc": "技能s5动作",
+        "value": "s5"
+    },
+    {
+        "desc": "攻击动作",
+        "value": "attack"
+    },
+    {
+        "desc": "睡眠动作",
+        "value": "sleep"
+    },
+    {
+        "desc": "唤醒动作",
+        "value": "wake"
+    },
+    {
+        "desc": "静步动作",
+        "value": "quiet"
+    },
+    {
+        "desc": "出生动作",
+        "value": "born"
+    }
+]

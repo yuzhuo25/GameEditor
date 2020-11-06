@@ -6,6 +6,7 @@
 <script>
 import MainPage from './pages/MainPage.vue'
 import RootFileDialog from './components/RootFileDialog.vue'
+import MenuSet from '../function/MenuSet'
 
 const { ipcRenderer } = require('electron')
 
@@ -23,6 +24,12 @@ export default {
         this.hasRootFileRef = true;
     }
     console.log("[App] [hasRootFileRef]", this.hasRootFileRef)
+
+    //菜单事件监听
+    // MenuSet();
+    // ipcRenderer.on("CREATE_LEVEL", (event, arg) => {
+    //     console.log("[MenuSet] [MenuType.CREATE_LEVEL]")
+    // })
   },
 
   name: 'App',
