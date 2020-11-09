@@ -20,7 +20,7 @@ export default class LevelData {
             this.tips = dataJson.tips;
             this.gameData = new GameData(dataJson.gameData);
         } else {
-            this.levelId = Tools.generateId();
+            this.levelId = Tools.generateUUID();
             this.gameData = new GameData();
         }
     }

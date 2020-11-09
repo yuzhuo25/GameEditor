@@ -35,8 +35,12 @@ export default class CurrentLevelManager {
     get currentScene() {
         return this._currentScene;
     }
+    
+    get stage() {
+        return this._stage;
+    }
 
-    set currentScene(currentScene: CurrentScene) {
+    public setEditScene(currentScene: CurrentScene) {
         // 关闭之前可能存在的
         this.closeCurrentScene();
 
@@ -55,9 +59,7 @@ export default class CurrentLevelManager {
         Laya.stage.addChild(scene);
     }
 
-    get stage() {
-        return this._stage;
-    }
+    
 
     /**
      * 

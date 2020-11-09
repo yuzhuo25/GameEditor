@@ -51,6 +51,7 @@
 import ConfigData from "../../../function/ConfigData";
 import {ref} from "vue";
 import CurrentLevelManager from "../../../laya/manager/CurrentLevelManager"
+import CurrentScene from "../../../laya/scene/CurrentScene"
 const { ipcRenderer } = require('electron');
 
 const root_f = localStorage.getItem("rootFile");
@@ -87,19 +88,18 @@ export default {
         handleOk() {
             this.showModal = false;
             //创建一个新关卡
-
         },
         changeSceneMap() {
             //舞台创建
-            const mapUri = `file://${root_f}level_res/bg_map/${this.mapName}`;
+            const mapUri = `level_res/bg_map/${this.mapName}`;
             console.log("[NewLevelModal] [changeSceneMap]",mapUri);
 
             //加载默认场景
             Laya.loader.create(mapUri, Laya.Handler.create(this, _ => {
                 const texture = Laya.loader.getRes(mapUri);
                 if(texture) {
-                    let currentScene = CurrentLevelManager.instance().currentScene.createEditScene(texture);
-                    CurrentEditSceneManager.instance().setEditScene(currentScene);
+                    let currentScene = CurrentScene.createCurrentScene(texture);
+                    CurrentLevelManager.instance().setEditScene(currentScene);
                     Laya.stage.addChild(currentScene.scene3D);
                     console.log(Laya.stage);
                 } else {

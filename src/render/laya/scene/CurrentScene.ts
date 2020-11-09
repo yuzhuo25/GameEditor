@@ -29,9 +29,6 @@ export default class CurrentScene {
     /* */
     private _texture: Laya.Texture2D | null;
 
-    private static d3_w: number = 0
-    private static d3_h: number = 0
-
     private static _instance: CurrentScene;
 
     private constructor() {
@@ -48,7 +45,7 @@ export default class CurrentScene {
 
     /**
      * 根据传入的背景图创建编辑器使用的编辑Scene对象
-     * @param texture 
+     * @param texture
      */
     public static createCurrentScene(texture: Laya.Texture2D): CurrentScene {
         if (!texture) {
@@ -59,8 +56,6 @@ export default class CurrentScene {
         const _currentConfig = CurrentLevelManager.instance().currentConfig;
         _currentConfig.planeWidth = texture.width * Constants.PIXEL_3D_RATIO;
         _currentConfig.planeHeight = texture.height * Constants.PIXEL_3D_RATIO;
-        this.d3_w = texture.width * Constants.PIXEL_3D_RATIO;
-        this.d3_h = texture.height * Constants.PIXEL_3D_RATIO;
         currentScene.scene3D = new Laya.Scene3D();
         currentScene.scene3D.ambientColor = new Laya.Vector3(0.5, 0.5, 0.5);
         currentScene.initContainer();

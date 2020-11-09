@@ -19,46 +19,40 @@
     // import StaticData from '@/layaLayer/EditorData/StaticData';
 
 export default {
-
-    components: {
-    }, 
-    props: ['isCurrentTab'],
-    
-    data(){
-        return {
-            visible: false,
-        }
-    },
-    created(){
-    },
     mounted () {
-        const pixelRito = window.devicePixelRatio;
-        const canvas_w = 1920;
-        const canvas_h = 1040;
+        const pixelRatio = window.devicePixelRatio;
+        const stage_w = 1920;
+        const stage_h = 1040;
         const offset_l = 200;
         const offset_t = 100;
         let window_w = window.innerWidth;
         let window_h = window.innerHeight;
+        let canvasW = (window_w - offset_l) * pixelRatio;
+        let canvasH = 1040 * this.window_w / 1920;
 
         //配置laya舞台
-        this.initStage(canvas_w * pixelRito, canvas_h * pixelRito);
+        this.initStage(stage_w, stage_h);
 
         const canvasDiv = document.getElementById("layaContainer");
-        canvasDiv.style.width = `${canvas_w}px`;
-        canvasDiv.style.height = `${canvas_h}px`;
+        canvasDiv.style.width = `${canvasW}px`;
+        canvasDiv.style.height = `${canvasH}px`;
         canvasDiv.style.transformOrigin = "0 0";
-        canvasDiv.style.transform = `scale(${(window_w - offset_l)/canvas_w}, ${(window_h - offset_t)/canvas_h})`;
+        canvasDiv.style.transform = `scale(${canvasW/stage_w})`;
         canvasDiv.style.position = "absolute";
         canvasDiv.style.top = `${offset_t}px`;
         canvasDiv.style.left = `${offset_l}px`;
+
         window.onresize = () => {
             window_w = window.innerWidth;
             window_h = window.innerHeight;
-            canvasDiv.style.transform = `scale(${(window_w - offset_l)/canvas_w}, ${(window_h - offset_t)/canvas_h})`;
+            let canvasW = (window_w - offset_l) * pixelRatio;
+            let canvasH = 1040 * this.window_w / 1920;
+            canvasDiv.style.width = `${canvasW}px`;
+            canvasDiv.style.height = `${canvasH}px`;
+            canvasDiv.style.transform = `scale(${canvasW/stage_w})`;
         }
     },
     methods: {
-        
         /**
          * 向主进程发送导入|更新资源事件
          */
@@ -93,5 +87,4 @@ export default {
 <style>
 
 </style>
-
 
