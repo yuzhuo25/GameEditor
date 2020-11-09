@@ -1,4 +1,4 @@
-import StageManager from '../manager/StageManager';
+import CurrentLevelManager from '../manager/CurrentLevelManager';
 import Constants from '../common/Constants';
 import AddCollider from '../function/addCollider';
 import KKGroundMaterial from '../shader/KKGroundMaterial';
@@ -56,7 +56,7 @@ export default class CurrentScene {
         }
         let currentScene: CurrentScene = new CurrentScene();
         currentScene._texture = texture;
-        const _currentConfig = StageManager.instance().currentConfig;
+        const _currentConfig = CurrentLevelManager.instance().currentConfig;
         _currentConfig.planeWidth = texture.width * Constants.PIXEL_3D_RATIO;
         _currentConfig.planeHeight = texture.height * Constants.PIXEL_3D_RATIO;
         this.d3_w = texture.width * Constants.PIXEL_3D_RATIO;
@@ -108,7 +108,7 @@ export default class CurrentScene {
             // warn
             return;
         }
-        const _currentConfig = StageManager.instance().currentConfig;
+        const _currentConfig = CurrentLevelManager.instance().currentConfig;
         //初始化照相机
         this.camera = new Laya.Camera(0, 0.1, 10000);
         this.camera.name = `camera`;
@@ -170,7 +170,7 @@ export default class CurrentScene {
             console.warn(`[CurrentScene] [initPlane] [纹理未添加成功] [${this._texture}]`);
             return;
         }
-        const _currentConfig = StageManager.instance().currentConfig;
+        const _currentConfig = CurrentLevelManager.instance().currentConfig;
 
         const plane3D: Laya.MeshSprite3D = new Laya.MeshSprite3D(Laya.PrimitiveMesh.createPlane(_currentConfig.planeWidth, _currentConfig.planeHeight * 2, 1, 1));
         plane3D.name = 'plane3D';
@@ -190,7 +190,7 @@ export default class CurrentScene {
     /* 切换场景贴图 */
     public static changeTexture(_texture: Laya.Texture2D) {
 
-        let _currentScene: CurrentScene = StageManager.instance().currentScene;
+        let _currentScene: CurrentScene = CurrentLevelManager.instance().currentScene;
 
         if (!_currentScene) {
             console.warn("[CurrentScene] [changeTexture] [当前舞台为空]！");
@@ -203,7 +203,7 @@ export default class CurrentScene {
 
     /* 清理旧场景贴图 */
     private chearPlane() {
-        let _currentScene: CurrentScene = StageManager.instance().currentScene;
+        let _currentScene: CurrentScene = CurrentLevelManager.instance().currentScene;
         const plane = _currentScene.container3D.getChildByName("plane3D");
         plane && plane.destroy(true);
     }

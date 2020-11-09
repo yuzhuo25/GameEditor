@@ -12,7 +12,7 @@
                         show-search
                         option-filter-prop="children"
                         style="width: 200px"
-                        
+                        @change="changeSceneMap"
                         >
                         <a-select-option
                             v-for="(mapitem, index) in sceneMaps"
@@ -50,7 +50,10 @@
 <script>
 import ConfigData from "../../../function/ConfigData";
 import {ref} from "vue";
+import CurrentLevelManager from "../../../laya/manager/CurrentLevelManager"
 const { ipcRenderer } = require('electron');
+
+const root_f = localStorage.getItem("rootFile");
 
 export default {
     setup() {
@@ -58,7 +61,6 @@ export default {
         ipcRenderer.on("CREATE_LEVEL", (event, arg) => {
             console.log("[MenuSet] [MenuType.CREATE_LEVEL]")
             showModal.value = true;
-
         })
 
         const sceneMaps = ref([]);
@@ -87,6 +89,24 @@ export default {
             //创建一个新关卡
 
         },
+        changeSceneMap() {
+            //舞台创建
+            const mapUri = `file://${root_f}level_res/bg_map/${this.mapName}`;
+            console.log("[NewLevelModal] [changeSceneMap]",mapUri);
+
+            //加载默认场景
+            Laya.loader.create(mapUri, Laya.Handler.create(this, _ => {
+                const texture = Laya.loader.getRes(mapUri);
+                if(texture) {
+                    let currentScene = CurrentLevelManager.instance().currentScene.createEditScene(texture);
+                    CurrentEditSceneManager.instance().setEditScene(currentScene);
+                    Laya.stage.addChild(currentScene.scene3D);
+                    console.log(Laya.stage);
+                } else {
+                    console.warn('[加载背景图失败]');
+                }
+            }));
+        }
        
         // filterOption(input, option) {
         //     return option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0;
